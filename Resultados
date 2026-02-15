@@ -2,11 +2,11 @@ Resultados del Benchmark (Análisis de Rendimiento)
 Se realizaron pruebas con tableros de 5x5 de alta complejidad para comparar el comportamiento de los algoritmos. A continuación se detallan las métricas obtenidas:
 
 Nivel y Algoritmo	Movimientos	Nodos Expandidos	Tiempo (s)	Memoria RAM (MB)
-5x5.1 & BFS	10	3,569,409	1747.68	1085.71
-5x5.1 & DFS	30	1,014,742	61.06	507.45
-5x5.1 & ATS	10	3,363	0.44	4.04
-5x5.4 & BFS	9	1,985,426	831.08	2338.30
-5x5.4 & ATS	9	506	0.04	4.04
+5x5.1 & BFS	        10	        3,569,409	       1747.68	   1085.71
+5x5.1 & DFS       	30	        1,014,742	       61.06	     507.45
+5x5.1 & ATS	        10	        3,363	           0.44	       4.04
+5x5.4 & BFS	        9	          1,985,426	       831.08	     2338.30
+5x5.4 & ATS	        9	          506              0.04	       4.04
 
 Hallazgos Principales
 Eficiencia del Algoritmo ATS:
@@ -23,5 +23,5 @@ El problema de DFS:
 
 Aunque DFS es más rápido que BFS en tiempo de ejecución, genera soluciones muy ineficientes. Para el nivel 5x5.1, dio una solución de 30 movimientos, cuando el óptimo era de solo 10.
 
-📈 Conclusión Técnica
+Conclusión Técnica
 El benchmark demuestra que la búsqueda informada (ATS), al utilizar una heurística basada en el estado de las luces, reduce el espacio de búsqueda de forma drástica. Esto permite resolver tableros complejos en milisegundos, algo que la búsqueda a ciegas (BFS/DFS) no puede lograr de forma eficiente en entornos con recursos limitados.
