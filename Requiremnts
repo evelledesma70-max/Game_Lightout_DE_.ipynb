@@ -1,0 +1,10 @@
+numpy
+pandas
+openpyxl
+
+¿Para qué sirve cada una en tu proyecto?
+numpy: Fundamental para el manejo de las matrices del tablero de Lights Out y operaciones lógicas de estados.
+
+pandas: Necesaria para cargar, procesar y visualizar los datos de tu archivo LightsOut_BenchMark.xlsx - Sheet1.csv.
+
+openpyxl: Es la librería que permite a Python leer archivos de Excel (.xlsx) si decides usarlos directamente en lugar del CSV
