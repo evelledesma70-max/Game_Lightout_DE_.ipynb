@@ -1,45 +1,54 @@
-IA para Lights Out: Solucionador con Algoritmos de Búsqueda
-Este proyecto utiliza Inteligencia Artificial para resolver el juego de lógica Lights Out. El objetivo es encontrar la secuencia de movimientos necesaria para apagar todas las luces de un tablero, analizando la eficiencia de diferentes estrategias de búsqueda en términos de tiempo y memoria RAM.
+Entendido, mil disculpas por la confusión. Aquí tienes el README.md exclusivo de tu proyecto de Lights Out, siguiendo estrictamente la estructura y el formato que me pediste, sin mezclar información del otro proyecto.
 
-Sobre el Juego:
-Lights Out es un puzzle de cuadrícula donde:
+Benchmark de Lights Out AI Solver
+Este repositorio contiene un benchmark completo para el problema de Lights Out, aplicado a un entorno de resolución de puzzles lógicos mediante Inteligencia Artificial.
+El proyecto evalúa la eficiencia de distintos algoritmos de búsqueda para apagar una cuadrícula de luces de manera óptima.
 
-Al presionar una luz, esta cambia de estado (de encendido a apagado, o viceversa).
+ Objetivo del proyecto
+Simular un sistema de lógica Lights Out: Implementar las mecánicas de cambio de estado de luces y sus adyacentes.
 
-Sus vecinos directos (arriba, abajo, izquierda, derecha) también cambian de estado.
+Evaluar el desempeño del sistema usando datasets de diferentes tamaños: Probar la capacidad de la IA en tableros de diversas complejidades.
 
-El juego se gana cuando todas las luces están apagadas.
+Calcular el costo total (movimientos y recursos): Determinar la ruta óptima y el gasto de memoria RAM.
 
-Algoritmos Implementados:
-Para resolver el problema, se comparan tres enfoques clásicos de la Inteligencia Artificial:
+Facilitar la comparación entre escenarios: Analizar cómo escalan los algoritmos BFS, DFS y ATS ante problemas más difíciles.
 
-BFS (Búsqueda en Anchura): Explora todas las posibilidades nivel por nivel. Garantiza la solución más corta (menos movimientos), pero consume mucha memoria RAM en tableros grandes.
+ Contexto del problema
+El juego consiste en una cuadrícula de luces. El objetivo es apagar todos los focos considerando las siguientes reglas:
 
-DFS (Búsqueda en Profundidad): Explora un camino hasta el fondo antes de probar otro. Es rápido para encontrar una solución, aunque a veces da más vueltas de las necesarias.
+Al presionar una luz, esta cambia de estado (encendido/apagado).
 
-ATS (Algoritmo A-Star / A-Estrella): El método más inteligente. Utiliza una heurística (pistas sobre cuántas luces quedan prendidas) para guiar la búsqueda, logrando un equilibrio perfecto entre rapidez y ahorro de memoria.
+Sus vecinos directos (arriba, abajo, izquierda y derecha) también cambian de estado.
 
-Resultados del BenchmarkEl proyecto incluye un análisis comparativo basado en pruebas reales con tableros de 5x5 de alta dificultad:AlgoritmoVentaja PrincipalUso de RAM (Promedio)¿Solución Óptima?BFSMínimos movimientosMuy Alto (>2000 MB)SíDFSVelocidad de hallazgoMedio (~500 MB)NoATSEficiencia InteligenteBajo (~35 MB)Sí
+El reto es encontrar la combinación exacta de clics que deja el tablero totalmente a oscuras.
 
-Nota técnica: Según los datos obtenidos, el algoritmo ATS es significativamente más eficiente para resolver tableros complejos sin saturar los recursos del sistema, mientras que BFS es el que más recursos exige.
+ Estructura del proyecto
+main.py: Código principal ejecutable que integra los algoritmos de búsqueda.
 
-Estructura del Repositorio:
-/src: Contiene la lógica del juego (LightsOutGame) y los algoritmos de búsqueda.
+data/: Datasets con configuraciones iniciales de tableros (niveles).
 
-/data: Niveles de prueba en archivos de texto.
+README_DATASETS.md: Descripción de los archivos de entrada y niveles de dificultad.
 
-LightsOut_BenchMark.csv: Datos detallados del rendimiento de cada algoritmo.
+requirements.txt: Dependencias del proyecto (bibliotecas necesarias para el análisis).
 
-Exploracion.ipynb: Cuaderno interactivo para ejecutar las pruebas en Google Colab o Jupyter.
+▶️ Cómo ejecutar el proyecto
+Clonar el repositorio
 
-Cómo ejecutarlo
-Clona este repositorio.
+Bash
+git clone https://github.com/tu_usuario/lights-out-ai-benchmark.git
+Instalar dependencias
 
-Asegúrate de tener Python 3 instalado.
+Bash
+pip install -r requirements.txt
+Ejecutar el código
 
-Ejecuta el archivo principal o el cuaderno de notas para ver a la IA resolviendo los tableros en tiempo real.
+Bash
+python main.py
+ Resumen de Algoritmos
+BFS: Encuentra la solución con menos movimientos.
 
-Proyecto desarrollado para el estudio de algoritmos de búsqueda y resolución de problemas de espacios de estados en Inteligencia Artificial.
+DFS: Encuentra soluciones rápidamente en tableros profundos.
 
+ATS: Optimiza el uso de memoria RAM mediante el uso de heurísticas inteligentes.
 
 
